@@ -14,6 +14,7 @@ import {
   SiTailwindcss,
   SiFirebase,
   SiMysql,
+  SiPhp,
 } from 'react-icons/si'
 
 const FaPalette = () => (
@@ -34,10 +35,11 @@ const Skills = () => {
     { name: 'JavaScript', level: 85, icon: <FaJs />, color: '#F0DB4F', category: 'Frontend' },
     { name: 'ReactJS', level: 85, icon: <FaReact />, color: '#61DAFB', category: 'Frontend' },
     { name: 'TypeScript', level: 80, icon: <SiTypescript />, color: '#3178C6', category: 'Frontend' },
-    { name: 'NodeJS', level: 75, icon: <FaNodeJs />, color: '#68A063', category: 'Backend' },
+    { name: 'NodeJS', level: 85, icon: <FaNodeJs />, color: '#68A063', category: 'Backend' },
     { name: 'Bootstrap', level: 85, icon: <FaBootstrap />, color: '#7952B3', category: 'Frontend' },
     { name: 'Tailwind CSS', level: 90, icon: <SiTailwindcss />, color: '#06B6D4', category: 'Frontend' },
-    { name: 'SQL', level: 80, icon: <SiMysql />, color: '#4479A1', category: 'Backend' },
+    { name: 'SQL', level: 85, icon: <SiMysql />, color: '#4479A1', category: 'Backend' },
+    { name: 'PHP', level: 80, icon: <SiPhp />, color: '#777BB4', category: 'Backend' },
     { name: 'Firebase', level: 75, icon: <SiFirebase />, color: '#FFCA28', category: 'Backend' },
     { name: 'UI/UX Design', level: 85, icon: <FaPalette />, color: '#FF6B6B', category: 'Design' },
     { name: 'Figma', level: 85, icon: <FaFigma />, color: '#F24E1E', category: 'Design' },

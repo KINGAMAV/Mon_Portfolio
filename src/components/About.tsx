@@ -71,19 +71,19 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Je m'appelle Patrick Amavi, développeur web fullstack et UI/UX designer passionné par l'informatique.
-              Mon parcours académique et mes projets personnels m'ont permis d'acquérir des bases solides en programmation,
-              en développement web moderne, ainsi qu'en design d'interfaces utilisateur.
+              Je m'appelle Patrick Amavi, informaticien développeur d'application passionné par la création d'applications web modernes.
+              Actuellement en formation pour obtenir mon BTS Informatique Développeur d'Application (IDA) à Paris, 
+              j'acquiers des bases solides en algorithme, logique de programmation et méthodologie MERISE.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Actuellement <span className="text-primary font-semibold">freelance</span>, je développe des applications
-              web complètes et performantes, alliant fonctionnalité et esthétique. Je crée des expériences utilisateur
-              intuitives et des interfaces modernes qui répondent aux besoins des utilisateurs.
+              Je maîtrise le développement fullstack avec React, Node.js, Express et TypeScript pour le frontend,
+              ainsi que PHP, Node.js et SQL pour le backend. Mes bases de données incluent Supabase, PostgreSQL et MERISE.
+              Je crée des applications web complètes et performantes, alliant fonctionnalité et esthétique.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Mon ambition est de continuer à me spécialiser en développement fullstack et en cybersécurité,
-              tout en renforçant mes compétences en design UI/UX. Je suis ouvert aux opportunités et collaborations
-              qui me permettront de relever de nouveaux défis techniques et créatifs.
+              J'ai développé plusieurs projets fullstack notables, notamment Cerconnet, une application web interne avec +30 utilisateurs actifs/jour,
+              et une application web pour IWT (Impact World Translation). Mon ambition est de continuer à me spécialiser en développement fullstack
+              et en cybersécurité, tout en renforçant mes compétences en design UI/UX.
             </p>
             <div className="glass-effect p-6 rounded-xl border-l-4 border-primary">
               <p className="text-xl font-semibold text-primary mb-2">Disponible pour de nouveaux projets</p>

@@ -50,7 +50,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300"
           >
-            Développeur Web Fullstack & UI/UX Designer
+            Informaticien Développeur d'Application
           </motion.h2>
 
           <motion.p
@@ -59,9 +59,9 @@ const Hero = () => {
             transition={{ delay: 0.7 }}
             className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
           >
-            Freelance passionné par la création d'expériences web modernes et performantes.
+            Spécialiste en développement fullstack avec React, Node.js, PHP et SQL.
             <br />
-            Ouvert aux opportunités et collaborations.
+            Créateur d'applications web modernes, performantes et intuitives.
           </motion.p>
 
           <motion.div

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaStar, FaQuoteLeft } from 'react-icons/fa'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import { Testimonial } from '../types'
 
 const Testimonials = () => {
@@ -20,6 +20,12 @@ const Testimonials = () => {
 
   const fetchTestimonials = async () => {
     try {
+      if (!isSupabaseConfigured) {
+        console.log('Supabase not configured, using default testimonials')
+        setLoading(false)
+        return
+      }
+      
       const { data, error } = await supabase
         .from('testimonials')
         .select('*')
