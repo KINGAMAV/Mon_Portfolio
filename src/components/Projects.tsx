@@ -50,6 +50,23 @@ const Projects = () => {
       demoLink: 'https://iwt-one.vercel.app/',
       codeLink: 'https://github.com/KINGAMAV/IWT',
     },
+    {
+      id: 3,
+      title: 'MyFootShop',
+      description: 'E-commerce d\'articles sportifs  avec une interface mobile-first',
+      longDescription: 'MyFootShop est une boutique en ligne moderne dédiée aux Maillots et  articles sportifs, offrant une expérience utilisateur fluide, un parcours d\'achat clair et une interface mobile-first. Le site est conçu pour présenter les produits avec des filtres dynamiques, un panier optimisé et une navigation intuitive.',
+      stack: ['Javascript', 'TypeScript', 'Tailwind CSS','HTML/CSS'],
+      features: [
+        'Catalogue produit responsive',
+        'Navigation mobile-first',
+        'Animations micro-interactions',
+        'Présentation produit détaillée',
+        'Intégration de liens externes',
+      ],
+      image: 'capture3.png',
+      demoLink: 'https://myfootshop.vercel.app/',
+      codeLink: 'https://github.com/KINGAMAV/myfootshop',
+    },
   ]
 
   return (
