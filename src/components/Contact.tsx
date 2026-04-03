@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaWhatsapp, FaStar } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaWhatsapp } from 'react-icons/fa'
 import { SiTiktok } from 'react-icons/si'
-import { supabase } from '../lib/supabase'
 
 const Contact = () => {
   const [ref, inView] = useInView({

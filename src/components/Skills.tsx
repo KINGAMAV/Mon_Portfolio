@@ -7,7 +7,6 @@ import {
   FaReact,
   FaNodeJs,
   FaBootstrap,
-  FaFigma,
 } from 'react-icons/fa'
 import {
   SiTypescript,

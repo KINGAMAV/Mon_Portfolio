@@ -1,4 +1,4 @@
-import { FaGithub, FaEnvelope, FaWhatsapp, FaHeart } from 'react-icons/fa'
+import { FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import { SiTiktok } from 'react-icons/si'
 
 const Footer = () => {
