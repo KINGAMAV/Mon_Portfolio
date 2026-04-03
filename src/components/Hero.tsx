@@ -50,7 +50,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300"
           >
-            Informaticien Développeur d'Application
+            Informaticien Développeur d'Application Junior
           </motion.h2>
 
           <motion.p
@@ -59,9 +59,8 @@ const Hero = () => {
             transition={{ delay: 0.7 }}
             className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto"
           >
-            Spécialiste en développement fullstack avec React, Node.js, PHP et SQL.
+            Actuellement en Licence 3 de Développement fullstack , j'ai une base solide en technologies web Moderne et une passion pour la création d'expériences numériques exceptionnelles.
             <br />
-            Créateur d'applications web modernes, performantes et intuitives.
           </motion.p>
 
           <motion.div

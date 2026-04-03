@@ -19,8 +19,6 @@ const Navbar = () => {
     { name: 'À propos', href: '#about' },
     { name: 'Compétences', href: '#skills' },
     { name: 'Projets', href: '#projects' },
-    { name: 'UI/UX', href: '#uiux' },
-    { name: 'Témoignages', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -42,12 +40,18 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          <motion.div
+          <motion.a
             whileHover={{ scale: 1.05 }}
-            className="text-2xl sm:text-3xl font-bold font-display"
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault()
+              handleNavClick('#hero')
+            }}
+            className="flex items-center gap-2"
           >
-            AMAV<span className="text-primary">I</span>
-          </motion.div>
+            <img src="/monlogo.png" alt="Logo Patrick Amavi" className="h-10 w-10 object-contain" />
+            <span className="text-xl sm:text-2xl font-bold font-display">AMAVI</span>
+          </motion.a>
 
           <div className="hidden lg:flex space-x-8">
             {navItems.map((item) => (

@@ -11,7 +11,6 @@ const Contact = () => {
     threshold: 0.1,
   })
 
-  const [activeForm, setActiveForm] = useState<'contact' | 'testimonial'>('contact')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -21,15 +20,6 @@ const Contact = () => {
     email: '',
     phone: '',
     message: '',
-  })
-
-  const [testimonialForm, setTestimonialForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    role: '',
-    message: '',
-    rating: 5,
   })
 
   const handleContactSubmit = async (e: React.FormEvent) => {
@@ -45,41 +35,7 @@ const Contact = () => {
     }, 1500)
   }
 
-  const handleTestimonialSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
 
-    try {
-      const { error: submitError } = await supabase.from('testimonials').insert([
-        {
-          name: testimonialForm.name,
-          email: testimonialForm.email,
-          company: testimonialForm.company || null,
-          role: testimonialForm.role || null,
-          message: testimonialForm.message,
-          rating: testimonialForm.rating,
-        },
-      ])
-
-      if (submitError) throw submitError
-
-      setSuccess(true)
-      setTestimonialForm({
-        name: '',
-        email: '',
-        company: '',
-        role: '',
-        message: '',
-        rating: 5,
-      })
-      setTimeout(() => setSuccess(false), 5000)
-    } catch (err: any) {
-      setError(err.message || 'Une erreur est survenue')
-    } finally {
-      setLoading(false)
-    }
-  }
 
   return (
     <section id="contact" className="py-20 sm:py-32 bg-black">
@@ -206,38 +162,13 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="glass-effect p-8 rounded-xl"
           >
-            <div className="flex gap-4 mb-6">
-              <button
-                onClick={() => setActiveForm('contact')}
-                className={`flex-1 py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  activeForm === 'contact'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-                }`}
-              >
-                Me contacter
-              </button>
-              <button
-                onClick={() => setActiveForm('testimonial')}
-                className={`flex-1 py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  activeForm === 'testimonial'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-                }`}
-              >
-                Témoignage
-              </button>
-            </div>
-
             {success && (
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
               >
-                {activeForm === 'contact'
-                  ? 'Message envoyé avec succès!'
-                  : 'Témoignage soumis avec succès! Il sera affiché après validation.'}
+                Message envoyé avec succès!
               </motion.div>
             )}
 
@@ -247,8 +178,7 @@ const Contact = () => {
               </div>
             )}
 
-            {activeForm === 'contact' ? (
-              <form onSubmit={handleContactSubmit} className="space-y-4">
+            <form onSubmit={handleContactSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">Nom complet</label>
                   <input
@@ -304,107 +234,6 @@ const Contact = () => {
                   {loading ? 'Envoi en cours...' : 'Envoyer le message'}
                 </button>
               </form>
-            ) : (
-              <form onSubmit={handleTestimonialSubmit} className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Nom complet</label>
-                  <input
-                    type="text"
-                    required
-                    value={testimonialForm.name}
-                    onChange={(e) =>
-                      setTestimonialForm({ ...testimonialForm, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="Votre nom"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    value={testimonialForm.email}
-                    onChange={(e) =>
-                      setTestimonialForm({ ...testimonialForm, email: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="votre@email.com"
-                  />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Entreprise (optionnel)</label>
-                    <input
-                      type="text"
-                      value={testimonialForm.company}
-                      onChange={(e) =>
-                        setTestimonialForm({ ...testimonialForm, company: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Nom de l'entreprise"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Poste (optionnel)</label>
-                    <input
-                      type="text"
-                      value={testimonialForm.role}
-                      onChange={(e) =>
-                        setTestimonialForm({ ...testimonialForm, role: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                      placeholder="Votre poste"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Note</label>
-                  <div className="flex gap-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <button
-                        key={star}
-                        type="button"
-                        onClick={() => setTestimonialForm({ ...testimonialForm, rating: star })}
-                        className="text-3xl transition-colors"
-                      >
-                        <FaStar
-                          className={
-                            star <= testimonialForm.rating ? 'text-yellow-400' : 'text-gray-600'
-                          }
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">Votre témoignage</label>
-                  <textarea
-                    required
-                    value={testimonialForm.message}
-                    onChange={(e) =>
-                      setTestimonialForm({ ...testimonialForm, message: e.target.value })
-                    }
-                    rows={5}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Partagez votre expérience..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {loading ? 'Envoi en cours...' : 'Soumettre le témoignage'}
-                </button>
-              </form>
-            )}
           </motion.div>
         </div>
       </div>

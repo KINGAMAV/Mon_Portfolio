@@ -71,24 +71,21 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              Je m'appelle Patrick Amavi, informaticien développeur d'application passionné par la création d'applications web modernes.
-              Actuellement en formation pour obtenir mon BTS Informatique Développeur d'Application (IDA) à Paris, 
-              j'acquiers des bases solides en algorithme, logique de programmation et méthodologie MERISE.
+              Je m’appelle Patrick Amavi, développeur d’applications passionné par la création de solutions web modernes. Actuellement en formation pour obtenir ma Licence en Informatique (Développeur Web Fullstack) à l’Institut CERCO à Abidjan, j’ai acquis des bases solides en algorithmique, logique de programmation et méthodologie MERISE.
+
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Je maîtrise le développement fullstack avec React, Node.js, Express et TypeScript pour le frontend,
-              ainsi que PHP, Node.js et SQL pour le backend. Mes bases de données incluent Supabase, PostgreSQL et MERISE.
-              Je crée des applications web complètes et performantes, alliant fonctionnalité et esthétique.
+              Pour mes projets fullstack, j'utilise HTML/CSS, React, Tailwind CSS et Bootstrap pour le frontend, ainsi que PHP, Node.js et SQL pour le backend. Côté données, je travaille avec Supabase et la modélisation MERISE pour concevoir des applications complètes, performantes et esthétiques.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              J'ai développé plusieurs projets fullstack notables, notamment Cerconnet, une application web interne avec +30 utilisateurs actifs/jour,
+              Dans mon apprentissage J'ai développé plusieurs projets fullstack , notamment Cerconnet, une application web interne avec +30 utilisateurs actifs/jour,
               et une application web pour IWT (Impact World Translation). Mon ambition est de continuer à me spécialiser en développement fullstack
-              et en cybersécurité, tout en renforçant mes compétences en design UI/UX.
+             en travaillant sur des soluitions concrètes dans un milieu professionnel.
             </p>
             <div className="glass-effect p-6 rounded-xl border-l-4 border-primary">
               <p className="text-xl font-semibold text-primary mb-2">Disponible pour de nouveaux projets</p>
               <p className="text-gray-400">
-                Je suis actuellement disponible pour des missions freelance et ouvert aux collaborations sur des projets innovants.
+                J’ai déjà réalisé plusieurs projets concrets, notamment Cerconnet, une application interne utilisée par plus de 30 utilisateurs actifs par jour, ainsi qu'une plateforme web pour IWT (Impact World Translation). Mon ambition est de mettre mes compétences au service de projets innovants au sein d'une équipe professionnelle.
               </p>
             </div>
           </motion.div>

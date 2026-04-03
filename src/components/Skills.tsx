@@ -30,22 +30,24 @@ const Skills = () => {
   })
 
   const skills = [
-    { name: 'HTML', level: 95, icon: <FaHtml5 />, color: '#E44D26', category: 'Frontend' },
+    { name: 'HTML', level: 90, icon: <FaHtml5 />, color: '#E44D26', category: 'Frontend' },
     { name: 'CSS', level: 90, icon: <FaCss3Alt />, color: '#2965F1', category: 'Frontend' },
-    { name: 'JavaScript', level: 85, icon: <FaJs />, color: '#F0DB4F', category: 'Frontend' },
-    { name: 'ReactJS', level: 85, icon: <FaReact />, color: '#61DAFB', category: 'Frontend' },
+    { name: 'JavaScript', level: 65, icon: <FaJs />, color: '#F0DB4F', category: 'Frontend' },
+    { name: 'ReactJS', level: 50, icon: <FaReact />, color: '#61DAFB', category: 'Frontend' },
     { name: 'TypeScript', level: 80, icon: <SiTypescript />, color: '#3178C6', category: 'Frontend' },
-    { name: 'NodeJS', level: 85, icon: <FaNodeJs />, color: '#68A063', category: 'Backend' },
+    { name: 'NodeJS', level: 50, icon: <FaNodeJs />, color: '#68A063', category: 'Backend' },
     { name: 'Bootstrap', level: 85, icon: <FaBootstrap />, color: '#7952B3', category: 'Frontend' },
-    { name: 'Tailwind CSS', level: 90, icon: <SiTailwindcss />, color: '#06B6D4', category: 'Frontend' },
-    { name: 'SQL', level: 85, icon: <SiMysql />, color: '#4479A1', category: 'Backend' },
-    { name: 'PHP', level: 80, icon: <SiPhp />, color: '#777BB4', category: 'Backend' },
-    { name: 'Firebase', level: 75, icon: <SiFirebase />, color: '#FFCA28', category: 'Backend' },
-    { name: 'UI/UX Design', level: 85, icon: <FaPalette />, color: '#FF6B6B', category: 'Design' },
-    { name: 'Figma', level: 85, icon: <FaFigma />, color: '#F24E1E', category: 'Design' },
+    { name: 'Tailwind CSS', level: 60, icon: <SiTailwindcss />, color: '#06B6D4', category: 'Frontend' },
+    { name: 'SQL', level: 50, icon: <SiMysql />, color: '#4479A1', category: 'Backend' },
+    { name: 'PHP', level: 50, icon: <SiPhp />, color: '#777BB4', category: 'Backend' },
+    { name: 'Firebase', level: 65, icon: <SiFirebase />, color: '#FFCA28', category: 'Backend' },
+    { name: 'Lovable.ia', level: 90, icon: <FaPalette />, color: '#60A5FA', category: 'Outils IA' },
+    { name: 'Manus', level: 85, icon: <FaPalette />, color: '#34D399', category: 'Outils IA' },
+    { name: 'Claude', level: 80, icon: <FaPalette />, color: '#F97316', category: 'Outils IA' },
+    { name: 'Firebase Studio', level: 75, icon: <SiFirebase />, color: '#FF8122', category: 'Outils IA' },
   ]
 
-  const categories = ['Frontend', 'Backend', 'Design']
+  const categories = ['Frontend', 'Backend', 'Outils IA']
 
   return (
     <section id="skills" className="py-20 sm:py-32 bg-black">
@@ -62,7 +64,7 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Technologies et outils que je maîtrise pour créer des solutions web modernes
+            Technologies, frameworks, et outils IA que je maîtrise pour créer des solutions web modernes
           </p>
         </motion.div>
 

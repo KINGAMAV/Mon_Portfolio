@@ -30,7 +30,7 @@ const Footer = () => {
               AMAV<span className="text-primary">I</span>
             </h3>
             <p className="text-gray-400 mb-4">
-              Développeur Web Fullstack & UI/UX Designer freelance créatif et passionné.
+              Développeur Web Fullstack  freelance créatif et passionné.
               Je transforme vos idées en solutions digitales performantes.
             </p>
             <div className="flex gap-4">
@@ -91,25 +91,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-primary">Liens rapides</h4>
-            <ul className="space-y-2">
-              {navLinks.slice(4).map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      handleScrollTo(link.href)
-                    }}
-                    className="text-gray-400 hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
           <div>
             <h4 className="text-lg font-semibold mb-4 text-primary">Contact</h4>
@@ -137,7 +119,7 @@ const Footer = () => {
             <span>&copy; {currentYear} Patrick Amavi. Tous droits réservés.</span>
             <span className="hidden sm:inline">|</span>
             <span className="flex items-center gap-1">
-              Fait avec <FaHeart className="text-red-500 animate-pulse" /> et React + TypeScript
+              Fait avec et React + TypeScript
             </span>
           </p>
         </div>
