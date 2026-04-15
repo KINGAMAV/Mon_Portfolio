@@ -67,6 +67,23 @@ const Projects = () => {
       demoLink: 'https://myfootshop.vercel.app/',
       codeLink: 'https://github.com/KINGAMAV/myfootshop',
     },
+
+        {
+      id: 4,
+      title: 'MonNetflix',
+      description: 'Application de bande d\'annonce vidéo avec interface utilisateur inspirée de Netflix',
+      longDescription: 'Mon Netflix est une application de bande d\'annonce vidéo inspirée de l\'interface utilisateur de Netflix. Elle permet aux utilisateurs de découvrir et de regarder des bandes d\'annonce de films et séries populaires, avec une navigation fluide, des catégories dynamiques et une présentation visuelle attrayante.  avec fonctionalités de recherche et de filtrage par humeur.',
+      stack: [ 'HTML','JavaScript', 'CSS Vanilla', 'API en ligne'],
+      features: [
+        'Système d\'authentification sécurisé',
+        'mise en favorie des films et séries',
+        'Possibilité de regarder en excluvité les films et séries',
+        'Architecture fullstack complète',
+      ],
+      image: 'capture4.png',
+      demoLink: 'https://mon-netflix-lilac.vercel.app/',
+      codeLink: 'https://github.com/KINGAMAV/MonNetflix',
+    },
   ]
 
   return (
@@ -137,7 +154,7 @@ const Projects = () => {
                 </div>
               </div>
             </motion.div>
-          ))}
+          ))},
         </div>
       </div>
 
@@ -228,7 +245,7 @@ const Projects = () => {
                 ))}
             </motion.div>
           </motion.div>
-        )}
+        )},
       </AnimatePresence>
     </section>
   )
